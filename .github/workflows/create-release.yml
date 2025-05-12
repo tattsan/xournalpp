@@ -17,18 +17,6 @@ env:
   nightly-build-branch: 'master'
 
 jobs:
-  check-if-main-repo:
-    runs-on: ubuntu-latest
-    outputs:
-      is_main: ${{ steps.check.outputs.is_main }}
-    steps:
-      - id: check
-        run: |
-          if [ "${{ github.repository }}" = "xournalpp/xournalpp" ]; then
-            echo "is_main=true" >> $GITHUB_OUTPUT
-          else
-            echo "is_main=false" >> $GITHUB_OUTPUT
-          fi
   prepare:
     if: github.repository == 'xournalpp/xournalpp'
     runs-on: ubuntu-latest
