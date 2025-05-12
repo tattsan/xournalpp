@@ -24,7 +24,7 @@ jobs:
     steps:
       - id: check
         run: |
-          if [ "${{ github.repository }}" = "xournalpp/xournalpp" ]; then
+          if [ "${{ github.repository }}" = "tattsan/xournalpp" ]; then
             echo "is_main=true" >> $GITHUB_OUTPUT
           else
             echo "is_main=false" >> $GITHUB_OUTPUT
